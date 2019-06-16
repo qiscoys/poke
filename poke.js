@@ -48,11 +48,11 @@ $(function () {
             .delay(index*100)//延迟
             .animate({left:0,top:480,opacity:1})//位置
     }
-   /*
-   * 选牌
-   * */
-        //(i,j)
-        //(i+1,j)(i+1.j+1)
+    /*
+    * 选牌
+    * */
+    //(i,j)
+    //(i+1,j)(i+1.j+1)
     let first=null;
     box.on('click','.poke',function () {
         let _this=$(this);
@@ -79,23 +79,23 @@ $(function () {
         } else{
             //判断
             let number1=first.data('number'),number2=_this.data('number')
-           if (number1+number2===14){
+            if (number1+number2===14){
                 $('.active').animate({top:0,left:710,opacity:0},function () {
                     $(this).remove();
                     $('.tips').html('消除成功').addClass('alert-success').fadeIn().delay(1000).fadeOut();
                 })
-           } else{
-               $('.active').animate({top:'+=30'},function () {
-                   $(this).removeClass('active')
-               });
-           }
+            } else{
+                $('.active').animate({top:'+=30'},function () {
+                    $(this).removeClass('active')
+                });
+            }
             first=null;
         }
     })
     /*切换*/
     let n=0;
     $('.right').on('click',function () {
-            // $('.left:last')//筛选
+        // $('.left:last')//筛选
 
         $('.left').last().css('zIndex',n++).animate({left:710},function () {
             $(this).removeClass('left').addClass('right')
