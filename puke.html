@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.4.1.min.js"></script>
+    <script src="puke.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .title {
+            position: relative;
+            width: 800px;
+            height: 100px;
+            background: black;
+            margin-left: 224px;
+            line-height: 100px;
+            text-align: center;
+            color: white;
+            text-shadow:5px 5px 5px red;
+            font-size: 30px;
+            animation: myfisrt 5s;
+            box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+        .box{
+            width: 800px;
+            height: 600px;
+            position: absolute;
+            left: 0;
+            top: 200px;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            /*background:linear-gradient(black,white);*/
+            background: url("./zou.gif");
+            background-size: 100%;
+            box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+        .poke{
+            width: 90px;
+            height: 120px;
+            background: skyblue;
+            position: absolute;
+            left: 350px;
+            top: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+
+        }
+        .tips{
+            display: none;;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 200px;
+            max-width: 700px;
+            transform: translate(-50%,-50%);
+            z-index: 99999;
+            text-align: center;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .alert-success{
+            color: #00c0dd;
+            background-color: #b0b0b0;
+            border-color: white;
+        }
+        button{
+            border: none;
+            outline: none;
+            background: #273441;
+            width: 100px;
+            height: 30px;
+            color: #fff;
+            border-radius: 5px;
+            position: absolute;
+            left: 350px;
+            bottom: 40px;
+        }
+        .leftBtn{
+            bottom: 0;
+         }
+    </style>
+</head>
+<body>
+    <div class="title">扑克牌游戏</div>
+    <div class="box" data-age="18">
+            <button class="right">&gt;</button>
+        <button class="leftBtn">&lt;</button>
+    </div>
+    <div class="tips"></div>
+</body>
+</html>
